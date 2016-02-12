@@ -33,7 +33,13 @@ int main() {
 }
 
 void Parse(char* cmnd, char* cmd[], char input[]) {
-    cout << "$ ";
+    char* username;
+    char hostname[40];
+
+    username = getlogin();
+    gethostname(hostname, sizeof hostname);
+
+    cout << username << "@" << hostname << "$ ";
     cin.getline(input, 50);
     cmnd = strtok(input, " ");
     int i = 0;
