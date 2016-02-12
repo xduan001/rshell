@@ -1,5 +1,4 @@
 #include <iostream>
-#include <boost/tokenizer.hpp>
 #include <string>
 #include <unistd.h>
 #include <stdlib.h>
@@ -8,7 +7,6 @@
 #include <string.h>
 
 using namespace std;
-using namespace boost;
 
 void Parse(char* cmnd, char* cmd[], char input[]);
 void Clear(char* cmd[]);
@@ -17,14 +15,7 @@ void Execute(char* cmd[]);
 
 
 int main() {
-/*  
-    string s = "ls -a; echo hello && mkdir test || echo world; git status";
-    tokenizer<> tok(s);
-    
-    for (tokenizer<>::iterator beg=tok.begin(); beg != tok.end(); ++beg) {
-        cout << *beg << "\n";
-    }     
-*/
+
     char* cmnd;
     char* cmd[40];
     char input[50];
@@ -32,7 +23,7 @@ int main() {
     while(cmd[0] != NULL) {
         Clear(cmd);
         Parse(cmnd, cmd, input);
-        if(strcmp(cmd[0], "exit" == 0)) {
+        if(strcmp(cmd[0], "exit") == 0) {
             break;
         }    
         else {
