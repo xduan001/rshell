@@ -9,3 +9,5 @@ ls
 ls -a
 
 git status
+
+#exit
