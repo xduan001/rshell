@@ -1,6 +1,6 @@
 
 COMPILE = g++ -Wall -Werror -ansi -pedantic
 
-all: main.cpp
+all: 
 	$(COMPILE) -o a.out main.cpp
 

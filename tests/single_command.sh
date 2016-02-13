@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./"a.out"
+
 echo "test"
 
 mkdir test.cc

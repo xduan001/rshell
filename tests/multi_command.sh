@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./"a.out"
+
 mkdir abc.cc; mkdir bca.cc
 
 echo a && echo b && echo c
