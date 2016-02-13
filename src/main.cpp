@@ -16,7 +16,7 @@ void Execute(char* cmd[]);
 
 int main() {
 
-    char* cmnd;
+    char* cmnd = 0;
     char* cmd[40];
     char input[50];
 
