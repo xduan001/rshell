@@ -2,8 +2,8 @@
 COMPILE = g++ -Wall -Werror -ansi -pedantic
 
 all:
-	cd src; make
+	mkdir bin; cd src; make; mv rshell .. ; cd .. ; mv rshell bin;
 
 rshell: 
-	mkdir bin; cd src; make; mv a.out .. ; cd .. ; mv a.out bin;
+	mkdir bin; cd src; make; mv rshell .. ; cd .. ; mv rshell bin;
 
