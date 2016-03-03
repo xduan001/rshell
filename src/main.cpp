@@ -5,6 +5,7 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <string.h>
+#include <vector>
 
 using namespace std;
 
@@ -19,6 +20,7 @@ int main() {
     char* cmnd = 0;
     char* cmd[40];
     char input[50];
+    vector<char*> cmd_list;
 
     while(cmd[0] != NULL) {
         Clear(cmd);
@@ -27,7 +29,8 @@ int main() {
             break;
         }    
         else {
-            Execute(cmd);
+//            Execute(cmd);
+            cmd_list.push_back(cmd);                
         }    
     }    
 }
